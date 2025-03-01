@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 # Import dj-database-url at the beginning of the file.
+import os
 import dj_database_url
 from pathlib import Path
 
@@ -131,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
